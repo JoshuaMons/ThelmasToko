@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thelma's Toko — Food & Good Eats</title>
+  <meta name="description" content="Thelma's Toko — Homemade food and good eats. See our menu and order via Instagram." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">Thelma's Toko</a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.instagram.com/thelmas.toko/" target="_blank" rel="noopener noreferrer" class="nav-ig">Instagram</a>
+    </nav>
+    <button class="menu-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <p class="hero-tag">Homemade food & good eats</p>
+        <h1 class="hero-title">Thelma's<br /><em>Toko</em></h1>
+        <p class="hero-desc">Fresh, homemade food made with care. See our menu and order on Instagram.</p>
+        <a href="https://www.instagram.com/thelmas.toko/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">See menu on Instagram</a>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <span class="section-label">About</span>
+        <h2 class="section-title">A little about us</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Welcome to <strong>Thelma's Toko</strong>. We make homemade food with love—follow our Instagram to see the menu, daily specials, and place orders.</p>
+            <p>DM us to order or ask about today’s offerings.</p>
+          </div>
+          <div class="about-visual">
+            <div class="about-card">
+              <span class="about-card-label">@thelmas.toko</span>
+              <p>Menu, specials & orders</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section shop">
+      <div class="container">
+        <span class="section-label">Menu</span>
+        <h2 class="section-title">See our food on Instagram</h2>
+        <p class="shop-intro">Our menu, daily specials, and food photos are on Instagram. Tap to browse and order via DM.</p>
+        <a href="https://www.instagram.com/thelmas.toko/" target="_blank" rel="noopener noreferrer" class="shop-cta">
+          <span class="shop-cta-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </span>
+          Open @thelmas.toko
+        </a>
+        <div class="shop-placeholders">
+          <div class="placeholder-card"><span>Menu</span></div>
+          <div class="placeholder-card"><span>Specials</span></div>
+          <div class="placeholder-card"><span>Order via DM</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Get in touch</h2>
+        <p class="contact-text">Order food, ask about the menu, or say hi—DM us on Instagram and we’ll get back to you.</p>
+        <div class="contact-links">
+          <a href="https://www.instagram.com/thelmas.toko/" target="_blank" rel="noopener noreferrer" class="contact-link contact-ig">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span>@thelmas.toko</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-brand">Thelma's Toko</p>
+      <a href="https://www.instagram.com/thelmas.toko/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <p class="footer-copy">© <span id="year"></span> Thelma's Toko</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.menu-btn').addEventListener('click', function() {
+      document.querySelector('.nav').classList.toggle('open');
+      this.classList.toggle('open');
+    });
+    window.addEventListener('scroll', function() {
+      document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>
