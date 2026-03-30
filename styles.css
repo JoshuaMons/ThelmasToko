@@ -218,13 +218,12 @@ a {
 
 .menu-card {
   min-height: 13rem;
-  padding: 1rem 0.85rem 0.9rem;
+  padding: 0;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0.65rem;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
@@ -235,6 +234,21 @@ a {
 
 .menu-card.hidden {
   display: none;
+}
+
+.menu-photo {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 0.85rem 0.8rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
 }
 
 .kicker {
