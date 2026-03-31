@@ -31,7 +31,7 @@ function onScroll() {
   const y = window.scrollY;
 
   /* Scrolled style */
-  navbar.classList.toggle('scrolled', y > 60);
+  if (navbar) navbar.classList.toggle('scrolled', y > 60);
 
   /* Back-to-top visibility */
   if (backToTop) {

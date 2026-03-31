@@ -397,7 +397,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-content {
   position: relative;
   z-index: 2;
-  padding-top: var(--navbar-h);
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1212,7 +1212,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
 
   /* Hero */
-  .hero-content { padding-top: calc(var(--navbar-h) + 1rem); }
+  .hero-content { padding-top: 2rem; }
   .hero-scroll-hint { display: none; }
 
   /* Services */
