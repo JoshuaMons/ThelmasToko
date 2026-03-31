@@ -3,214 +3,481 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thelma's Toko | Onze Menukaart</title>
-  <meta name="description" content="Menukaart van Thelma's Toko: voorgerechten, hoofdgerechten, biryani, vegetarische gerechten, desserts en drankjes." />
+
+  <!-- SEO -->
+  <title>Thelma's Toko Tilburg | Authentieke Surinaamse Keuken & Eet-restaurant</title>
+  <meta name="description" content="Thelma's Toko in Tilburg is dé plek voor authentieke Surinaamse gerechten. Vers bereid, afhalen of bezorgen. Ontdek ons menu, openingstijden en bestel online." />
+  <meta name="keywords" content="Thelma's Toko, Surinaamse toko, eten Tilburg, Surinaams restaurant Tilburg, afhalen Tilburg, catering Tilburg, Surinaams eten" />
+  <meta name="author" content="Thelma's Toko" />
+  <link rel="canonical" href="https://www.thelmas-toko.nl/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:title" content="Thelma's Toko Tilburg | Authentieke Surinaamse Keuken" />
+  <meta property="og:description" content="Proef de rijke smaken van Suriname bij Thelma's Toko in Tilburg. Vers bereid, met liefde gemaakt." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1200&h=630&fit=crop" />
+  <meta property="og:url" content="https://www.thelmas-toko.nl/" />
+  <meta property="og:locale" content="nl_NL" />
+
+  <!-- JSON-LD Structured Data (Local SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Thelma's Toko",
+    "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1200",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tilburg",
+      "addressCountry": "NL"
+    },
+    "servesCuisine": "Surinaams",
+    "priceRange": "€€",
+    "openingHours": "Tu-Su 12:00-21:00"
+  }
+  </script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <span class="brand-mark">TT</span>
-      <div>
-        <p class="brand-name">Thelma's Toko</p>
-        <p class="brand-sub">Tilburg</p>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<header class="navbar" id="navbar" role="banner">
+  <a href="#home" class="nav-logo" aria-label="Thelma's Toko homepage">
+    <span class="logo-mark">TT</span>
+    <div class="logo-text">
+      <span class="logo-name">Thelma's Toko</span>
+      <span class="logo-city">Tilburg</span>
+    </div>
+  </a>
+
+  <nav class="nav-menu" role="navigation" aria-label="Hoofdnavigatie">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home"     class="nav-link" id="nav-home">Home</a></li>
+      <li><a href="#services" class="nav-link" id="nav-services">Services</a></li>
+      <li><a href="#about"    class="nav-link" id="nav-about">Over Ons</a></li>
+      <li><a href="#reviews"  class="nav-link" id="nav-reviews">Reviews</a></li>
+      <li><a href="#gallery"  class="nav-link" id="nav-gallery">Galerij</a></li>
+      <li><a href="#contact"  class="nav-link" id="nav-contact">Contact</a></li>
+    </ul>
+    <a href="menu.html" class="btn btn-nav" id="btn-menu-nav">Bekijk Menu</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile nav overlay -->
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<section id="home" class="hero" aria-labelledby="hero-heading">
+  <div class="hero-bg-img" aria-hidden="true">
+    <img
+      src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1600&h=900&fit=crop&auto=format"
+      alt="Surinaams eten"
+      loading="eager"
+    />
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-content container">
+    <p class="hero-eyebrow animate-fade-up" aria-label="Welkom badge">🌶️ Authentieke Smaak uit Suriname</p>
+    <h1 id="hero-heading" class="hero-title animate-fade-up delay-1">
+      Thelma's Toko<br /><span class="hero-title-accent">in Tilburg</span>
+    </h1>
+    <p class="hero-desc animate-fade-up delay-2">
+      Proef de warme smaken van Suriname — vers bereid, met liefde en<br class="br-desktop" />
+      volgens geheime familierecepten. Afhalen of laten bezorgen in Tilburg.
+    </p>
+    <div class="hero-cta animate-fade-up delay-3">
+      <a href="#contact"  class="btn btn-primary" id="btn-bestellen">Bestel Nu</a>
+      <a href="menu.html" class="btn btn-outline" id="btn-menu-hero">Bekijk Menu</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint animate-fade-up delay-4" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES SECTION
+============================================================ -->
+<section id="services" class="services" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Wat wij bieden</p>
+      <h2 id="services-heading" class="section-title">Onze Services</h2>
+      <p class="section-desc">Alles wat je nodig hebt voor een heerlijke maaltijd — bij ons thuis of bij jou.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card" id="service-menu">
+        <div class="service-icon" aria-hidden="true">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <h3>Ons Menu</h3>
+        <p>Rijke Surinaamse gerechten — van roti en moksi alesi tot verse saoto soep. Vers bereid met de beste ingrediënten.</p>
+        <a href="menu.html" class="service-link">Bekijk menukaart <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="service-card" id="service-hours">
+        <div class="service-icon" aria-hidden="true">
+          <i class="fa-solid fa-clock"></i>
+        </div>
+        <h3>Openingstijden</h3>
+        <p>Van dinsdag t/m zondag zijn wij geopend van 12:00 tot 21:00 uur. Op maandag zijn wij gesloten.</p>
+        <a href="#contact" class="service-link">Plan je bezoek <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="service-card" id="service-order">
+        <div class="service-icon" aria-hidden="true">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <h3>Bestellen</h3>
+        <p>Afhalen aan de toonbank of laten bezorgen bij jou thuis in Tilburg. Snel, warm en altijd vers.</p>
+        <a href="#contact" class="service-link">Bestel nu <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="service-card" id="service-catering">
+        <div class="service-icon" aria-hidden="true">
+          <i class="fa-solid fa-bowl-food"></i>
+        </div>
+        <h3>Catering</h3>
+        <p>Maak je feest of evenement onvergetelijk met authentieke Surinaamse catering op maat voor elke gelegenheid.</p>
+        <a href="#contact" class="service-link">Catering aanvragen <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT SECTION
+============================================================ -->
+<section id="about" class="about" aria-labelledby="about-heading">
+  <div class="container about-inner">
+
+    <div class="about-image-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=700&h=840&fit=crop&auto=format"
+        alt="Vers bereide Surinaamse maaltijden bij Thelma's Toko Tilburg"
+        loading="lazy"
+        class="about-img"
+      />
+      <div class="about-badge" aria-label="Opgericht in 2016">
+        <span class="badge-year">2016</span>
+        <span class="badge-label">Opgericht</span>
       </div>
     </div>
-    <nav class="quick-links">
-      <a href="https://www.thuisbezorgd.nl/en/menu/thelmas" target="_blank" rel="noopener noreferrer">Bestellen</a>
-      <a href="https://www.instagram.com/thelmas.toko/" target="_blank" rel="noopener noreferrer">Instagram</a>
+
+    <div class="about-content">
+      <p class="section-eyebrow">Ons verhaal</p>
+      <h2 id="about-heading" class="section-title">Over Thelma's Toko</h2>
+      <p class="about-text">
+        Thelma's Toko is meer dan een eetrestaurant — het is een stukje Suriname midden in Tilburg. Sinds 2016 bereiden wij met passie en liefde authentieke gerechten op basis van eeuwenoude familierecepten die van generatie op generatie zijn doorgegeven.
+      </p>
+      <p class="about-text">
+        Of je nu binnenkomt voor een snelle hap, een dagschotel meeneemt of een catering wilt voor jouw feest of evenement — je ervaart altijd dezelfde warmte, kwaliteit en echt Surinaamse gastvrijheid. Wij zijn trots op wat we doen en dat proef je in elke hap.
+      </p>
+      <ul class="about-features" aria-label="Kenmerken van Thelma's Toko">
+        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Authentieke familierecepten</li>
+        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Dagelijks vers bereid</li>
+        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Afhalen &amp; bezorgen in Tilburg</li>
+        <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Catering op maat</li>
+      </ul>
+      <a href="menu.html" class="btn btn-primary" id="btn-about-menu">Ontdek ons menu</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     REVIEWS SECTION
+============================================================ -->
+<section id="reviews" class="reviews" aria-labelledby="reviews-heading">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Klantbeoordelingen</p>
+      <h2 id="reviews-heading" class="section-title">Wat klanten zeggen</h2>
+      <p class="section-desc">Meer dan 200 tevreden klanten gingen je voor.</p>
+    </div>
+
+    <div class="stars-row" aria-label="Gemiddelde beoordeling: 4.9 sterren">
+      <i class="fa-solid fa-star" aria-hidden="true"></i>
+      <i class="fa-solid fa-star" aria-hidden="true"></i>
+      <i class="fa-solid fa-star" aria-hidden="true"></i>
+      <i class="fa-solid fa-star" aria-hidden="true"></i>
+      <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+      <span>4.9 / 5</span>
+    </div>
+
+    <div class="reviews-grid">
+
+      <article class="review-card" id="review-sarah">
+        <div class="review-stars" aria-label="5 sterren">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <blockquote>
+          <p>"Heerlijk eten en altijd vers! De smaken zijn echt authentiek en doen me denken aan Suriname. De roti is absoluut de beste van Tilburg."</p>
+        </blockquote>
+        <footer class="review-author">
+          <div class="review-avatar" aria-hidden="true">S</div>
+          <div>
+            <strong>Sarah van Dijk</strong>
+            <span>Tilburg</span>
+          </div>
+        </footer>
+      </article>
+
+      <article class="review-card review-card--featured" id="review-michael">
+        <div class="review-stars" aria-label="5 sterren">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <blockquote>
+          <p>"Beste Surinaamse toko in Tilburg, absoluut een aanrader! De catering voor mijn verjaardag was een groot succes — iedereen was onder de indruk."</p>
+        </blockquote>
+        <footer class="review-author">
+          <div class="review-avatar" aria-hidden="true">M</div>
+          <div>
+            <strong>Michael Jansen</strong>
+            <span>Tilburg-Noord</span>
+          </div>
+        </footer>
+      </article>
+
+      <article class="review-card" id="review-fatima">
+        <div class="review-stars" aria-label="5 sterren">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <blockquote>
+          <p>"Snelle service en super vriendelijke mensen. De moksi alesi met gebakken ei is mijn favoriet. Ik kom hier elke week!"</p>
+        </blockquote>
+        <footer class="review-author">
+          <div class="review-avatar" aria-hidden="true">F</div>
+          <div>
+            <strong>Fatima El Amrani</strong>
+            <span>Tilburg</span>
+          </div>
+        </footer>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY SECTION
+============================================================ -->
+<section id="gallery" class="gallery" aria-labelledby="gallery-heading">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Foto's</p>
+      <h2 id="gallery-heading" class="section-title">Galerij</h2>
+      <p class="section-desc">Een kijkje in de wereld van Thelma's Toko.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item gallery-item--large">
+        <img src="assets/menu/dish-05.jpg" alt="Biryani — Thelma's Toko Tilburg" loading="lazy" />
+        <figcaption>Lamb Biryani</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="assets/menu/dish-01.png" alt="Samosa — Thelma's Toko Tilburg" loading="lazy" />
+        <figcaption>Samosa Maison</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="assets/menu/dish-02.png" alt="Pakora Mix — Thelma's Toko Tilburg" loading="lazy" />
+        <figcaption>Pakora Mix</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="assets/menu/dish-03.png" alt="Butter Chicken — Thelma's Toko Tilburg" loading="lazy" />
+        <figcaption>Butter Chicken</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="assets/menu/dish-06.png" alt="Palak Paneer — Thelma's Toko Tilburg" loading="lazy" />
+        <figcaption>Palak Paneer</figcaption>
+      </figure>
+      <figure class="gallery-item gallery-item--wide">
+        <img src="assets/menu/dish-09.png" alt="Daal Tadka — Thelma's Toko Tilburg" loading="lazy" />
+        <figcaption>Daal Tadka</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT SECTION
+============================================================ -->
+<section id="contact" class="contact" aria-labelledby="contact-heading">
+  <div class="container contact-inner">
+
+    <div class="contact-info">
+      <p class="section-eyebrow">Kom langs of neem contact op</p>
+      <h2 id="contact-heading" class="section-title">Contact &amp; Locatie</h2>
+
+      <ul class="contact-list" aria-label="Contactgegevens">
+        <li>
+          <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <strong>Adres</strong>
+            <span>Tilburg, Noord-Brabant, Nederland</span>
+          </div>
+        </li>
+        <li>
+          <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <strong>Telefoon</strong>
+            <a href="tel:+31000000000" id="contact-phone">+31 (0)00 000 0000</a>
+          </div>
+        </li>
+        <li>
+          <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <strong>E-mail</strong>
+            <a href="mailto:info@thelmas-toko.nl" id="contact-email">info@thelmas-toko.nl</a>
+          </div>
+        </li>
+        <li>
+          <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <strong>Openingstijden</strong>
+            <span>Di – Zo: 12:00 – 21:00</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="social-links" aria-label="Social media">
+        <a href="https://www.instagram.com/thelmas.toko/" target="_blank" rel="noopener noreferrer" class="social-link" id="social-instagram" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link" id="social-facebook" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.thuisbezorgd.nl/en/menu/thelmas" target="_blank" rel="noopener noreferrer" class="social-link" id="social-thuisbezorgd" aria-label="Thuisbezorgd">
+          <i class="fa-solid fa-motorcycle" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-map">
+      <iframe
+        title="Thelma's Toko locatie in Tilburg op Google Maps"
+        src="https://www.google.com/maps?q=Tilburg,+Noord-Brabant,+Nederland&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0; border-radius: 16px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA SECTION
+============================================================ -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container cta-inner">
+    <div class="cta-content">
+      <p class="section-eyebrow cta-eyebrow">Klaar voor de lekkerste maaltijd?</p>
+      <h2 id="cta-heading" class="cta-title">Bestel vandaag nog bij<br />Thelma's Toko!</h2>
+      <p class="cta-desc">Afhalen of bezorgen in Tilburg. Vers, snel en altijd lekker.</p>
+      <div class="cta-buttons">
+        <a href="#contact"  class="btn btn-primary btn-lg" id="btn-cta-bestel">Bestel nu</a>
+        <a href="menu.html" class="btn btn-white"           id="btn-cta-menu">Bekijk menu</a>
+      </div>
+    </div>
+    <div class="cta-image" aria-hidden="true">
+      <img
+        src="assets/menu/dish-07.png"
+        alt="Garnalen gerecht — Thelma's Toko"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+      <span class="logo-mark logo-mark--sm" aria-hidden="true">TT</span>
+      <div>
+        <p class="footer-brand-name">Thelma's Toko</p>
+        <p class="footer-brand-city">Tilburg, Nederland</p>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigatie">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">Over Ons</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#gallery">Galerij</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="menu.html">Menukaart</a></li>
+      </ul>
     </nav>
-  </header>
 
-  <main class="menu-page">
-    <section class="menu-hero">
-      <p class="eyebrow">THELMA'S MENU</p>
-      <h1>ONZE MENUKAART</h1>
-      <p class="hero-copy">Kies een categorie en ontdek onze signatuurgerechten in een visuele stijl die aansluit op het voorbeeld dat je deelde.</p>
-    </section>
+    <div class="footer-social" aria-label="Social media">
+      <a href="https://www.instagram.com/thelmas.toko/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.thuisbezorgd.nl/en/menu/thelmas" target="_blank" rel="noopener noreferrer" aria-label="Thuisbezorgd">
+        <i class="fa-solid fa-motorcycle" aria-hidden="true"></i>
+      </a>
+    </div>
 
-    <section class="filters" aria-label="Filter de menukaart">
-      <button class="chip active" data-filter="all">Alles</button>
-      <button class="chip" data-filter="entrees">Voorgerechten</button>
-      <button class="chip" data-filter="mains">Hoofdgerechten</button>
-      <button class="chip" data-filter="rice">Rijst & Biryani</button>
-      <button class="chip" data-filter="veggie">Vegetarisch</button>
-      <button class="chip" data-filter="desserts">Nagerechten</button>
-      <button class="chip" data-filter="drinks">Drankjes</button>
-    </section>
+  </div>
 
-    <section class="menu-grid" id="menu-grid">
-      <article class="menu-card bg-red" data-cat="entrees">
-        <img class="menu-photo" src="assets/menu/dish-01.png" alt="Samosa Maison" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Voorgerecht</p>
-          <h2>Samosa Maison</h2>
-          <p>Krokant deeg, gekruide aardappelvulling en muntchutney.</p>
-          <span class="price">€ 4,50</span>
-        </div>
-      </article>
-      <article class="menu-card bg-yellow" data-cat="entrees">
-        <img class="menu-photo" src="assets/menu/dish-02.png" alt="Pakora Mix" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Voorgerecht</p>
-          <h2>Pakora Mix</h2>
-          <p>Groentebeignets met zoet-pittige tamarindesaus.</p>
-          <span class="price">€ 5,50</span>
-        </div>
-      </article>
-      <article class="menu-card bg-cream" data-cat="mains">
-        <img class="menu-photo" src="assets/menu/dish-03.png" alt="Butter Chicken" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Special</p>
-          <h2>Butter Chicken</h2>
-          <p>Malse kip in romige tomatensaus met geurige rijst.</p>
-          <span class="price">€ 14,90</span>
-        </div>
-      </article>
-      <article class="menu-card bg-blue" data-cat="mains">
-        <img class="menu-photo" src="assets/menu/dish-04.png" alt="Chicken Tikka Wrap" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Streetfood</p>
-          <h2>Chicken Tikka Wrap</h2>
-          <p>Warme wrap met krokante salade en yoghurt-koriandersaus.</p>
-          <span class="price">€ 9,90</span>
-        </div>
-      </article>
-      <article class="menu-card bg-orange" data-cat="rice">
-        <img class="menu-photo" src="assets/menu/dish-05.jpg" alt="Lamb Biryani" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Rijst</p>
-          <h2>Lamb Biryani</h2>
-          <p>Basmatirijst, gemarineerd lamsvlees, krokante ui en kruiden.</p>
-          <span class="price">€ 16,90</span>
-        </div>
-      </article>
-      <article class="menu-card bg-green" data-cat="veggie">
-        <img class="menu-photo" src="assets/menu/dish-06.png" alt="Palak Paneer" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Vegetarisch</p>
-          <h2>Palak Paneer</h2>
-          <p>Zachte spinazie met paneer, komijn en gember.</p>
-          <span class="price">€ 13,90</span>
-        </div>
-      </article>
-      <article class="menu-card bg-pink" data-cat="mains">
-        <img class="menu-photo" src="assets/menu/dish-07.png" alt="Jalfrezi Crevettes" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Chefkeuze</p>
-          <h2>Jalfrezi Crevettes</h2>
-          <p>Gebakken garnalen met paprika in pittige tomatensaus.</p>
-          <span class="price">€ 17,50</span>
-        </div>
-      </article>
-      <article class="menu-card bg-purple" data-cat="rice">
-        <img class="menu-photo" src="assets/menu/dish-08.png" alt="Chicken Biryani" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Rijst</p>
-          <h2>Chicken Biryani</h2>
-          <p>Lange basmatirijst met gemarineerde kip, saffraan en koriander.</p>
-          <span class="price">€ 15,50</span>
-        </div>
-      </article>
-      <article class="menu-card bg-sand" data-cat="veggie">
-        <img class="menu-photo" src="assets/menu/dish-09.png" alt="Daal Tadka" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Vegetarisch</p>
-          <h2>Daal Tadka</h2>
-          <p>Langzaam gegaarde linzen met geroosterde knoflook en mosterdzaad.</p>
-          <span class="price">€ 12,50</span>
-        </div>
-      </article>
-      <article class="menu-card bg-red" data-cat="mains">
-        <img class="menu-photo" src="assets/menu/dish-10.png" alt="Chicken Madras" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Curry</p>
-          <h2>Chicken Madras</h2>
-          <p>Kruidige curry met lichte kokosmelk en gestoomde rijst.</p>
-          <span class="price">€ 14,50</span>
-        </div>
-      </article>
-      <article class="menu-card bg-yellow" data-cat="desserts">
-        <img class="menu-photo" src="assets/menu/dish-01.png" alt="Mango Kulfi" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Nagerecht</p>
-          <h2>Mango Kulfi</h2>
-          <p>Indiase mango-ijs met fijngehakte pistache.</p>
-          <span class="price">€ 5,90</span>
-        </div>
-      </article>
-      <article class="menu-card bg-cream" data-cat="desserts">
-        <img class="menu-photo" src="assets/menu/dish-02.png" alt="Gulab Jamun" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Nagerecht</p>
-          <h2>Gulab Jamun</h2>
-          <p>Zachte zoete balletjes in rozen- en kardemomsiroop.</p>
-          <span class="price">€ 4,90</span>
-        </div>
-      </article>
-      <article class="menu-card bg-blue" data-cat="drinks">
-        <img class="menu-photo" src="assets/menu/dish-03.png" alt="Mango Lassi" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Drankje</p>
-          <h2>Mango Lassi</h2>
-          <p>Frisse yoghurt met mango en een vleugje kardemom.</p>
-          <span class="price">€ 4,50</span>
-        </div>
-      </article>
-      <article class="menu-card bg-orange" data-cat="drinks">
-        <img class="menu-photo" src="assets/menu/dish-04.png" alt="Masala Chai" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Drankje</p>
-          <h2>Masala Chai</h2>
-          <p>Zwarte thee met specerijen, geserveerd met warme melk.</p>
-          <span class="price">€ 3,50</span>
-        </div>
-      </article>
-      <article class="menu-card bg-green" data-cat="mains">
-        <img class="menu-photo" src="assets/menu/dish-05.jpg" alt="Paneer Korma" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Signatuur</p>
-          <h2>Paneer Korma</h2>
-          <p>Paneer met cashew in een zachte en romige saus.</p>
-          <span class="price">€ 14,20</span>
-        </div>
-      </article>
-      <article class="menu-card bg-pink" data-cat="entrees">
-        <img class="menu-photo" src="assets/menu/dish-06.png" alt="Onion Bhaji" loading="lazy" />
-        <div class="card-body">
-          <p class="kicker">Voorgerecht</p>
-          <h2>Onion Bhaji</h2>
-          <p>Krokante uienbeignets met huisgemaakte chutney.</p>
-          <span class="price">€ 4,90</span>
-        </div>
-      </article>
-    </section>
-  </main>
+  <div class="footer-bottom">
+    <p>&copy; <span id="footer-year">2026</span> Thelma's Toko — Tilburg. Alle rechten voorbehouden.</p>
+  </div>
+</footer>
 
-  <footer class="footer">
-    <p>Thelma's Toko — Paletplein 14, Tilburg</p>
-    <p>Afhalen · Bezorging · Catering</p>
-  </footer>
+<!-- Back to top button -->
+<button class="back-to-top" id="back-to-top" aria-label="Terug naar boven">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
 
-  <script>
-    const chips = document.querySelectorAll('.chip');
-    const cards = document.querySelectorAll('.menu-card');
-
-    chips.forEach((chip) => {
-      chip.addEventListener('click', () => {
-        chips.forEach((item) => item.classList.remove('active'));
-        chip.classList.add('active');
-        const filter = chip.dataset.filter;
-        cards.forEach((card) => {
-          const category = card.dataset.cat;
-          const show = filter === 'all' || category === filter;
-          card.classList.toggle('hidden', !show);
-        });
-      });
-    });
-  </script>
+<script src="script.js"></script>
 </body>
 </html>

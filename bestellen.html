@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Bestellen | Thelma's Toko Tilburg — Afhalen & Bezorgen</title>
+  <meta name="description" content="Bestel gemakkelijk jouw favoriete Surinaamse gerechten bij Thelma's Toko in Tilburg. Ontdek onze opties voor afhalen, bezorgen of catering." />
+  <link rel="canonical" href="https://www.thelmas-toko.nl/bestellen" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bestellen — Thelma's Toko Tilburg" />
+  <meta property="og:description" content="Bestel direct jouw Surinaamse maaltijden." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu.css" />
+  
+  <style>
+    .order-page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1rem 5rem;
+    }
+    
+    .order-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .order-header h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--clr-primary-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .order-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .order-card-large {
+      background: var(--clr-surface);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--clr-line);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+    }
+    
+    .order-card-large:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--clr-primary-light);
+    }
+    
+    .order-card-icon {
+      width: 4rem;
+      height: 4rem;
+      border-radius: var(--radius-md);
+      background: rgba(200, 56, 42, 0.1);
+      display: grid;
+      place-items: center;
+      color: var(--clr-primary);
+      font-size: 1.8rem;
+    }
+    
+    .order-card-large h2 {
+      font-size: 1.4rem;
+      color: var(--clr-ink);
+    }
+    
+    .order-card-large p {
+      color: var(--clr-ink-2);
+      flex: 1;
+      font-size: 0.95rem;
+    }
+    
+    .order-card-large .btn {
+      width: 100%;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    
+    .info-banner {
+      background: var(--clr-surface-2);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-left: 4px solid var(--clr-accent);
+    }
+    
+    .info-banner i {
+      color: var(--clr-accent);
+      font-size: 1.5rem;
+    }
+    
+    .info-banner p {
+      font-size: 0.9rem;
+      color: var(--clr-ink-2);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── TOPBAR ──────────────────────────────────────────── -->
+<header class="topbar" role="banner">
+  <a class="brand" href="index.html" aria-label="Terug naar Thelma's Toko homepage">
+    <span class="brand-mark" aria-hidden="true">TT</span>
+    <div>
+      <p class="brand-name">Thelma's Toko</p>
+      <p class="brand-sub">Tilburg</p>
+    </div>
+  </a>
+
+  <nav class="quick-links" role="navigation" aria-label="Snelle links">
+    <a href="index.html" id="link-home">← Home</a>
+    <a href="menu.html"  id="link-menu">Menukaart</a>
+  </nav>
+</header>
+
+<!-- ── ORDER PAGE ──────────────────────────────────────── -->
+<main class="order-page">
+
+  <div class="order-header animate-fade-up">
+    <p class="eyebrow">HEB JE TREK?</p>
+    <h1>Bestel bij Thelma's Toko</h1>
+    <p class="section-desc">Kies hoe je jouw Surinaamse maaltijd wil ontvangen. Snel bezorgd of gezellig afhalen.</p>
+  </div>
+
+  <div class="order-options">
+    
+    <!-- Optie 1: Thuisbezorgd -->
+    <article class="order-card-large animate-fade-up delay-1">
+      <div class="order-card-icon" aria-hidden="true">
+        <i class="fa-solid fa-motorcycle"></i>
+      </div>
+      <h2>Thuisbezorgd</h2>
+      <p>Lekker makkelijk. Laat je maaltijd warm en snel bij je thuis bezorgen via ons platform op Thuisbezorgd.nl.</p>
+      <a href="https://www.thuisbezorgd.nl/en/menu/thelmas" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        Bestel via Thuisbezorgd
+      </a>
+    </article>
+
+    <!-- Optie 2: Telefonisch Afhalen -->
+    <article class="order-card-large animate-fade-up delay-2">
+      <div class="order-card-icon" aria-hidden="true">
+        <i class="fa-solid fa-phone"></i>
+      </div>
+      <h2>Telefonisch Bestellen</h2>
+      <p>Plaats je bestelling direct bij ons voor afhalen of bezorging in de buurt. Wij zorgen dat het klaarstaat!</p>
+      <a href="tel:+31000000000" class="btn btn-outline" style="color: var(--clr-primary); border-color: var(--clr-primary);">
+        <i class="fa-solid fa-phone"></i> +31 (0)00 000 0000
+      </a>
+    </article>
+
+    <!-- Optie 3: Catering & Grote Bestellingen -->
+    <article class="order-card-large animate-fade-up delay-3">
+      <div class="order-card-icon" aria-hidden="true">
+        <i class="fa-solid fa-bell-concierge"></i>
+      </div>
+      <h2>Catering</h2>
+      <p>Geef je een feest of evenement? Wij verzorgen authentieke Surinaamse catering, op maat gemaakt voor jouw wensen.</p>
+      <a href="mailto:info@thelmas-toko.nl" class="btn btn-white" style="border: 1px solid var(--clr-line);">
+        <i class="fa-regular fa-envelope"></i> Vraag offerte aan
+      </a>
+    </article>
+
+  </div>
+
+  <div class="info-banner animate-fade-up delay-4">
+    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+    <p><strong>Openingstijden:</strong> Wij zijn geopend van <strong>dinsdag tot en met zondag van 12:00 tot 21:00</strong>. Op maandag zijn wij gesloten. Voor grote catering opdrachten buiten openingstijden kun je contact met ons opnemen.</p>
+  </div>
+
+</main>
+
+<!-- ── FOOTER ───────────────────────────────────────────── -->
+<footer class="menu-footer" role="contentinfo" style="margin-top: auto;">
+  <div class="footer-row">
+    <p>
+      <a href="index.html" class="footer-home-link">← Terug naar homepage</a>
+    </p>
+    <p>Thelma's Toko — Tilburg &nbsp;|&nbsp; Afhalen · Bezorging · Catering</p>
+    <p>&copy; <span id="menu-footer-year">2026</span> Thelma's Toko</p>
+  </div>
+</footer>
+
+<script>
+  /* Footer year */
+  const yr = document.getElementById('menu-footer-year');
+  if (yr) yr.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

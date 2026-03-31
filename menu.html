@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Menukaart | Thelma's Toko Tilburg — Authentieke Surinaamse Gerechten</title>
+  <meta name="description" content="Bekijk de volledige menukaart van Thelma's Toko in Tilburg. Voorgerechten, hoofdgerechten, rijst &amp; biryani, vegetarische opties, desserts en drankjes." />
+  <link rel="canonical" href="https://www.thelmas-toko.nl/menu" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Menukaart — Thelma's Toko Tilburg" />
+  <meta property="og:description" content="Ontdek onze authentieke Surinaamse menukaart." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+
+<!-- ── TOPBAR ──────────────────────────────────────────── -->
+<header class="topbar" role="banner">
+  <a class="brand" href="index.html" aria-label="Terug naar Thelma's Toko homepage">
+    <span class="brand-mark" aria-hidden="true">TT</span>
+    <div>
+      <p class="brand-name">Thelma's Toko</p>
+      <p class="brand-sub">Tilburg</p>
+    </div>
+  </a>
+
+  <nav class="quick-links" role="navigation" aria-label="Snelle links">
+    <a href="index.html"                                                          id="link-home">← Home</a>
+    <a href="https://www.thuisbezorgd.nl/en/menu/thelmas" target="_blank" rel="noopener noreferrer" id="link-bestellen">Bestellen</a>
+    <a href="https://www.instagram.com/thelmas.toko/"     target="_blank" rel="noopener noreferrer" id="link-instagram">
+      <i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram
+    </a>
+  </nav>
+</header>
+
+<!-- ── MENU PAGE ───────────────────────────────────────── -->
+<main class="menu-page">
+
+  <!-- Hero banner -->
+  <section class="menu-hero" aria-labelledby="menu-heading">
+    <p class="eyebrow">THELMA'S MENU</p>
+    <h1 id="menu-heading">ONZE MENUKAART</h1>
+    <p class="hero-copy">
+      Vers bereid, met liefde en volgens geheime familierecepten — elke dag weer.
+      Kies je favoriet en geniet van authentieke Surinaamse smaken.
+    </p>
+  </section>
+
+  <!-- Filter chips -->
+  <section class="filters" aria-label="Filter de menukaart" role="group">
+    <button class="chip active" data-filter="all"      id="filter-all">Alles</button>
+    <button class="chip"        data-filter="entrees"  id="filter-entrees">Voorgerechten</button>
+    <button class="chip"        data-filter="mains"    id="filter-mains">Hoofdgerechten</button>
+    <button class="chip"        data-filter="rice"     id="filter-rice">Rijst &amp; Biryani</button>
+    <button class="chip"        data-filter="veggie"   id="filter-veggie">Vegetarisch</button>
+    <button class="chip"        data-filter="desserts" id="filter-desserts">Nagerechten</button>
+    <button class="chip"        data-filter="drinks"   id="filter-drinks">Drankjes</button>
+  </section>
+
+  <!-- Results count -->
+  <p class="results-count" id="results-count" aria-live="polite"></p>
+
+  <!-- Menu grid -->
+  <section class="menu-grid" id="menu-grid" aria-label="Menukaart gerechten">
+
+    <article class="menu-card bg-red" data-cat="entrees" id="card-samosa">
+      <img class="menu-photo" src="assets/menu/dish-01.png" alt="Samosa Maison — krokant deeg met gekruide aardappelvulling" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Voorgerecht</p>
+        <h2>Samosa Maison</h2>
+        <p>Krokant deeg, gekruide aardappelvulling en verse muntchutney.</p>
+        <span class="price">€ 4,50</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-yellow" data-cat="entrees" id="card-pakora">
+      <img class="menu-photo" src="assets/menu/dish-02.png" alt="Pakora Mix — groentebeignets met tamarindesaus" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Voorgerecht</p>
+        <h2>Pakora Mix</h2>
+        <p>Groentebeignets met zoet-pittige tamarindesaus.</p>
+        <span class="price">€ 5,50</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-cream" data-cat="mains" id="card-butter-chicken">
+      <img class="menu-photo" src="assets/menu/dish-03.png" alt="Butter Chicken — malse kip in romige tomatensaus" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Special</p>
+        <h2>Butter Chicken</h2>
+        <p>Malse kip in romige tomatensaus met geurige rijst.</p>
+        <span class="price">€ 14,90</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-blue" data-cat="mains" id="card-tikka-wrap">
+      <img class="menu-photo" src="assets/menu/dish-04.png" alt="Chicken Tikka Wrap — warme wrap met salade" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Streetfood</p>
+        <h2>Chicken Tikka Wrap</h2>
+        <p>Warme wrap met krokante salade en yoghurt-koriandersaus.</p>
+        <span class="price">€ 9,90</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-orange" data-cat="rice" id="card-lamb-biryani">
+      <img class="menu-photo" src="assets/menu/dish-05.jpg" alt="Lamb Biryani — basmatirijst met gemarineerd lamsvlees" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Rijst</p>
+        <h2>Lamb Biryani</h2>
+        <p>Basmatirijst, gemarineerd lamsvlees, krokante ui en kruiden.</p>
+        <span class="price">€ 16,90</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-green" data-cat="veggie" id="card-palak-paneer">
+      <img class="menu-photo" src="assets/menu/dish-06.png" alt="Palak Paneer — zachte spinazie met kaas" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Vegetarisch</p>
+        <h2>Palak Paneer</h2>
+        <p>Zachte spinazie met paneer, komijn en gember.</p>
+        <span class="price">€ 13,90</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-pink" data-cat="mains" id="card-jalfrezi">
+      <img class="menu-photo" src="assets/menu/dish-07.png" alt="Jalfrezi Crevettes — garnalen met paprika in pittige saus" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Chefkeuze 🔥</p>
+        <h2>Jalfrezi Crevettes</h2>
+        <p>Gebakken garnalen met paprika in pittige tomatensaus.</p>
+        <span class="price">€ 17,50</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-purple" data-cat="rice" id="card-chicken-biryani">
+      <img class="menu-photo" src="assets/menu/dish-08.png" alt="Chicken Biryani — basmatirijst met gemarineerde kip" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Rijst</p>
+        <h2>Chicken Biryani</h2>
+        <p>Lange basmatirijst met gemarineerde kip, saffraan en koriander.</p>
+        <span class="price">€ 15,50</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-sand" data-cat="veggie" id="card-daal">
+      <img class="menu-photo" src="assets/menu/dish-09.png" alt="Daal Tadka — langzaam gegaarde linzen" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Vegetarisch</p>
+        <h2>Daal Tadka</h2>
+        <p>Langzaam gegaarde linzen met geroosterde knoflook en mosterdzaad.</p>
+        <span class="price">€ 12,50</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-red" data-cat="mains" id="card-madras">
+      <img class="menu-photo" src="assets/menu/dish-10.png" alt="Chicken Madras — kruidige curry" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Curry</p>
+        <h2>Chicken Madras</h2>
+        <p>Kruidige curry met lichte kokosmelk en gestoomde rijst.</p>
+        <span class="price">€ 14,50</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-yellow" data-cat="desserts" id="card-kulfi">
+      <img class="menu-photo" src="assets/menu/dish-01.png" alt="Mango Kulfi — Indiaas mango-ijs" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Nagerecht</p>
+        <h2>Mango Kulfi</h2>
+        <p>Indiase mango-ijs met fijngehakte pistache.</p>
+        <span class="price">€ 5,90</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-cream" data-cat="desserts" id="card-gulab">
+      <img class="menu-photo" src="assets/menu/dish-02.png" alt="Gulab Jamun — zachte zoete balletjes" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Nagerecht</p>
+        <h2>Gulab Jamun</h2>
+        <p>Zachte zoete balletjes in rozen- en kardemomsiroop.</p>
+        <span class="price">€ 4,90</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-blue" data-cat="drinks" id="card-lassi">
+      <img class="menu-photo" src="assets/menu/dish-03.png" alt="Mango Lassi — frisse yoghurt met mango" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Drankje</p>
+        <h2>Mango Lassi</h2>
+        <p>Frisse yoghurt met mango en een vleugje kardemom.</p>
+        <span class="price">€ 4,50</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-orange" data-cat="drinks" id="card-chai">
+      <img class="menu-photo" src="assets/menu/dish-04.png" alt="Masala Chai — zwarte thee met specerijen" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Drankje</p>
+        <h2>Masala Chai</h2>
+        <p>Zwarte thee met specerijen, geserveerd met warme melk.</p>
+        <span class="price">€ 3,50</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-green" data-cat="mains" id="card-korma">
+      <img class="menu-photo" src="assets/menu/dish-05.jpg" alt="Paneer Korma — paneer met cashew" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Signatuur</p>
+        <h2>Paneer Korma</h2>
+        <p>Paneer met cashew in een zachte en romige saus.</p>
+        <span class="price">€ 14,20</span>
+      </div>
+    </article>
+
+    <article class="menu-card bg-pink" data-cat="entrees" id="card-bhaji">
+      <img class="menu-photo" src="assets/menu/dish-06.png" alt="Onion Bhaji — krokante uienbeignets" loading="lazy" />
+      <div class="card-body">
+        <p class="kicker">Voorgerecht</p>
+        <h2>Onion Bhaji</h2>
+        <p>Krokante uienbeignets met huisgemaakte chutney.</p>
+        <span class="price">€ 4,90</span>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- Empty state -->
+  <div class="no-results" id="no-results" hidden aria-live="polite">
+    <i class="fa-solid fa-bowl-food" aria-hidden="true"></i>
+    <p>Geen gerechten gevonden in deze categorie.</p>
+  </div>
+
+</main>
+
+<!-- ── FOOTER ───────────────────────────────────────────── -->
+<footer class="menu-footer" role="contentinfo">
+  <div class="footer-row">
+    <p>
+      <a href="index.html" class="footer-home-link">← Terug naar homepage</a>
+    </p>
+    <p>Thelma's Toko — Tilburg &nbsp;|&nbsp; Afhalen · Bezorging · Catering</p>
+    <p>&copy; <span id="menu-footer-year">2026</span> Thelma's Toko</p>
+  </div>
+</footer>
+
+<script>
+  /* ── Filter chips ─────────────────────────── */
+  const chips  = document.querySelectorAll('.chip');
+  const cards  = document.querySelectorAll('.menu-card');
+  const count  = document.getElementById('results-count');
+  const noRes  = document.getElementById('no-results');
+
+  function updateCount(visible) {
+    count.textContent = visible === cards.length
+      ? `${visible} gerechten`
+      : `${visible} van de ${cards.length} gerechten`;
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      const filter = chip.dataset.filter;
+      let visible = 0;
+
+      cards.forEach(card => {
+        const show = filter === 'all' || card.dataset.cat === filter;
+        card.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+
+      noRes.hidden = visible > 0;
+      updateCount(visible);
+    });
+  });
+
+  /* Initial count */
+  updateCount(cards.length);
+
+  /* ── Footer year ──────────────────────────── */
+  const yr = document.getElementById('menu-footer-year');
+  if (yr) yr.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
